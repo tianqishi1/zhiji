@@ -1,0 +1,4 @@
+[
+ {"params": {"demo": true}, "result": {"matched": 4, "mismatches": [], "total_expected": 4044.5, "total_actual": 4044.5, "balanced": true, "checked_at": 1795000000}, "expect_pass": true},
+ {"params": {"demo": true}, "result": {"matched": 3, "mismatches": [{"id": "INV-002", "kind": "amount", "expected": 356.5, "actual": 380.0}], "total_expected": 4044.5, "total_actual": 4068.0, "balanced": false, "checked_at": 1795000000}, "expect_pass": false}
+]

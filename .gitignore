@@ -1,0 +1,9 @@
+data/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+web/node_modules/
+web/dist/.vite/
+web/.edge-cdp/
+web/.edge-profile/

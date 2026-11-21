@@ -1,0 +1,6 @@
+{"entries": [
+ {"id": "INV-001", "amount": 1200.0, "desc": "云服务器月费"},
+ {"id": "INV-002", "amount": 356.5, "desc": "API 调用额度"},
+ {"id": "INV-003", "amount": 88.0, "desc": "域名续费"},
+ {"id": "INV-004", "amount": 2400.0, "desc": "外包设计尾款"}
+]}

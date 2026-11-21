@@ -1,0 +1,5 @@
+[
+ {"params": {"item": "降噪耳机 WH-1000XM6", "target_price": 1500}, "result": {"item": "降噪耳机 WH-1000XM6", "price": 1299.0, "ts": 1000, "url": "https://example.com/x"}, "expect_pass": true},
+ {"params": {"item": "降噪耳机 WH-1000XM6", "target_price": 1000}, "result": {"item": "降噪耳机 WH-1000XM6", "price": 1299.0, "ts": 1000, "url": "https://example.com/x"}, "expect_pass": false},
+ {"params": {"item": "x", "target_price": 1500}, "result": {"item": "x", "price": 1299.0, "ts": 1000, "url": "u"}, "now": 2000, "expect_pass": false}
+]

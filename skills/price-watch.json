@@ -1,0 +1,13 @@
+{
+  "id": "price-watch", "version": 1, "title": "盯价",
+  "executor": {"kind": "connector", "entry": "price_watch", "route": ["connector", "replay", "vision"], "sensitive_actions": ["pay"]},
+  "evaluator": {
+    "outcome_checks": [
+      {"id": "price_hit", "type": "assert", "expr": "result['price'] <= params['target_price']"},
+      {"id": "fresh", "type": "assert", "expr": "now - result['ts'] <= 600"}
+    ],
+    "llm_judge": {"enabled": false, "rubric": "价格证据是否可信且满足用户目标价", "sample_rate": 0.1},
+    "user_signal": {"weight": "highest"}
+  },
+  "data_contract": {"trajectory": ["intent", "plan", "steps", "artifacts", "verdict", "feedback"], "retention_days": 90, "export": "opt_in_anonymized"}
+}

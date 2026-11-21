@@ -1,0 +1,7 @@
+{"items": [
+ {"title": "PhoneGo: 手机智能体进入 Map+Replay 时代", "url": "https://github.com/HKUDS/PhoneGo", "summary": "PhoneCLI 导航地图 + OpenPhone 视觉兜底，token 成本减半", "ts": 1795000000, "source": "demo-feed"},
+ {"title": "Today 原生 Personal Agent 国内可用", "url": "https://todayai.cn", "summary": "鲜活记忆 + 主动出现 + 任务闭环，2 亿美元融资", "ts": 1795003600, "source": "demo-feed"},
+ {"title": "REA: 给 coding agent 的逆向工具链", "url": "https://github.com/morluto/rea", "summary": "HAR 录制一键编译成 AgentEnv 评测/RL 环境", "ts": 1795007200, "source": "demo-feed"},
+ {"title": "Today 原生 Personal Agent 国内可用", "url": "https://todayai.cn/dup", "summary": "重复条目（用于验证去重断言）", "ts": 1794990000, "source": "demo-feed"},
+ {"title": "某大厂助手内测：分发碾压但执行黑盒", "url": "https://example.com/bigco", "summary": "个人代理赛道窗口期分析", "ts": 1794996400, "source": "demo-feed"}
+]}

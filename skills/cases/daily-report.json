@@ -1,0 +1,5 @@
+[
+ {"params": {"topics": ["agent"]}, "result": {"items": [{"title": "PhoneGo 发布", "url": "https://example.com/a"}], "count": 1, "generated_at": 1795000000}, "expect_pass": true},
+ {"params": {}, "result": {"items": [{"title": "重复", "url": "https://example.com/a"}, {"title": "重复", "url": "https://example.com/b"}], "count": 2, "generated_at": 1795000000}, "expect_pass": false},
+ {"params": {}, "result": {"items": [{"title": "缺字段", "url": ""}], "count": 1, "generated_at": 1795000000}, "expect_pass": false}
+]

@@ -1,0 +1,14 @@
+{
+  "id": "invoice-reconcile", "version": 1, "title": "账单对账",
+  "executor": {"kind": "connector", "entry": "invoice_reconcile", "route": ["connector", "replay", "vision"], "sensitive_actions": []},
+  "evaluator": {
+    "outcome_checks": [
+      {"id": "balanced", "type": "assert", "expr": "result['balanced']"},
+      {"id": "no_mismatch", "type": "assert", "expr": "len(result['mismatches']) == 0"},
+      {"id": "totals_equal", "type": "assert", "expr": "abs(result['total_expected'] - result['total_actual']) < 0.01"}
+    ],
+    "llm_judge": {"enabled": false, "rubric": "对账结论是否与逐条证据一致", "sample_rate": 0.1},
+    "user_signal": {"weight": "highest"}
+  },
+  "data_contract": {"trajectory": ["intent", "plan", "steps", "artifacts", "verdict", "feedback"], "retention_days": 90, "export": "opt_in_anonymized"}
+}

@@ -1,0 +1,14 @@
+{
+  "id": "daily-report", "version": 1, "title": "信息聚合日报",
+  "executor": {"kind": "connector", "entry": "daily_report", "route": ["connector", "replay", "vision"], "sensitive_actions": []},
+  "evaluator": {
+    "outcome_checks": [
+      {"id": "has_items", "type": "assert", "expr": "result['count'] >= 1"},
+      {"id": "fields_complete", "type": "assert", "expr": "all(i['title'] and i['url'] for i in result['items'])"},
+      {"id": "dedup", "type": "assert", "expr": "len(set(i['title'] for i in result['items'])) == result['count']"}
+    ],
+    "llm_judge": {"enabled": false, "rubric": "日报是否覆盖用户关注主题且无重复", "sample_rate": 0.1},
+    "user_signal": {"weight": "highest"}
+  },
+  "data_contract": {"trajectory": ["intent", "plan", "steps", "artifacts", "verdict", "feedback"], "retention_days": 90, "export": "opt_in_anonymized"}
+}
