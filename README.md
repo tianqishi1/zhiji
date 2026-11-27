@@ -1,10 +1,13 @@
 # 知几 zhiji —— Eval-Native Personal Agent（M0）
 
+
+> **生态**：底座 [agent-base](https://github.com/tianqishi1/agent-base) · 评测 [eval-pipeline](https://github.com/tianqishi1/eval-pipeline) · 技能 [marketing-skills-cn](https://github.com/tianqishi1/marketing-skills-cn)
+
 纯 Python 标准库，零依赖。评测器与每个技能同生；verdict 即自进化的奖励信号。
 
 ## 快速开始
 ```powershell
-cd D:\codex\zhiji
+cd zhiji
 python -m zhiji.cli init        # 建库 + 契约校验 + 回归门 + 晋升
 python -m zhiji.cli seed        # 5 个演示任务（✓/✗/待确认）
 python -m zhiji.cli serve       # http://127.0.0.1:8765
